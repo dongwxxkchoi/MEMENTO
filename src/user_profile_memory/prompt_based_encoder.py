@@ -730,7 +730,7 @@ def test_prompt_based_encoder(use_openrouter: bool = False, model: str = None):
     
     if use_openrouter:
         # Use OpenRouter
-        api_key = os.getenv('OPENROUTER_API_KEY') or "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"
+        api_key = os.getenv('OPENROUTER_API_KEY')
         model = model or "meta-llama/llama-3.1-8b-instruct"
         print(f"Using OpenRouter with model: {model}")
         encoder = PromptBasedGraphEncoder(api_key=api_key, model=model, use_openrouter=True)
@@ -790,13 +790,13 @@ def example_usage(use_openrouter: bool = False, model: str = None):
     
     if use_openrouter:
         # Use OpenRouter
-        api_key = os.getenv('OPENROUTER_API_KEY') or "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"
+        api_key = os.getenv('OPENROUTER_API_KEY')
         model = model or "meta-llama/llama-3.1-8b-instruct"
         print(f"Using OpenRouter with model: {model}")
         encoder = PromptBasedGraphEncoder(api_key=api_key, model=model, use_openrouter=True)
     else:
         # Use OpenAI
-        api_key = os.getenv('OPENAI_API_KEY') or "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"
+        api_key = os.getenv('OPENAI_API_KEY')
         if not api_key:
             print("Please set OPENAI_API_KEY environment variable")
             return
