@@ -850,7 +850,7 @@ if __name__ == "__main__":
         
         # Create Encoder
         import os
-        api_key = os.getenv("OPENROUTER_API_KEY") or "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" if args.use_openrouter else os.getenv("OPENAI_API_KEY") or "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"
+        api_key = os.getenv("OPENROUTER_API_KEY") if args.use_openrouter else os.getenv("OPENAI_API_KEY")
         if not api_key:
             print("API key not found. Please check environment variables.")
             sys.exit(1)
