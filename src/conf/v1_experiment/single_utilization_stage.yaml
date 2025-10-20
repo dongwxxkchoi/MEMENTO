@@ -52,8 +52,6 @@ evaluation:
       user_profile_memory_path: "/HabitatLLM/resource/user_profile_memory/gpt_4o/scenes"
       user_profile_top_k: 5 # user profile RAG top k
 
-      openai_api_key: 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
-
       
   
 habitat:
